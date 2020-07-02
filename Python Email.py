@@ -11,7 +11,6 @@ msg = MIMEMultipart()
 x=open("x.py","r")
 xy=x.read()
 
-
 message = "Put here your message" + xy
  
 # setup the parameters of the message
