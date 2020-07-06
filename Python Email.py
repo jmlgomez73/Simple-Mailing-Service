@@ -8,12 +8,19 @@ import sys
 # create message object instance
 msg = MIMEMultipart()
 
+
+
+destiny = input("Enter the destination email: "+"\n")
+subject = input("Enter the subject: "+"\n")
+message_text = input("Enter the message: "+"\n")
+
+
 # setup the parameters of the message
-message = "Put here your message" 
+message = message_text
 password = "xxx"
 msg['From'] = "xxx@xxx"
-msg['To'] = "xxx@xxx"
-msg['Subject'] = "Put here the subject"
+msg['To'] = destiny
+msg['Subject'] = subject
  
 
 try:
@@ -42,4 +49,4 @@ try:
 	finally:	       
 		server.quit()
 except:
-	sys.exit( "mail failed; %s" % "CUSTOM_ERROR" )
+	sys.exit( "mail failed; %s" % "CUSTOM_ERROR" ) # give an error message
